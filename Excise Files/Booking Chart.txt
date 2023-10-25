@@ -1,0 +1,38 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+    var ctx = document.getElementById('bookingChart').getContext('2d');
+    var bookings = @json($bookings);
+
+    // Extract the required data from the bookings
+    var labels = bookings.map(function(booking) {
+        return booking.check_in; 
+    });
+
+    var data = bookings.map(function(booking) {
+        return booking.total_price;
+    });
+
+    var bookingChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Booking Data',
+                data: data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
