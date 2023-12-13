@@ -35,4 +35,6 @@ Route::middleware(['auth', 'roles:admin'])->group(function () {
     Route::get('/admin/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
 }); // End of Admin Group Middleware
 
+Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
+
 require __DIR__.'/auth.php';
