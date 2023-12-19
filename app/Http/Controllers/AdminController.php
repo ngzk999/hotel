@@ -51,9 +51,11 @@ class AdminController extends Controller
         $data->phone = $request->phone;
         $data->address = $request->address;
 
-        // update profile photo
+        // delete previous profile picture and update profile photo
         if ($request->file('photo'))
         {
+            unlink(public_path('upload/admin_images/').$data->photo);
+
             $file = $request->file('photo');
             $filename = date('YmdHi').$file->getClientOriginalName();
             $file->move(public_path('upload/admin_images'), $filename);
