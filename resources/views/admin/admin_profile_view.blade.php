@@ -143,6 +143,6 @@
     </div>
 </div>
 
-<script src="{{ asset('js/admin_profile_view.js') }}"></script>
+<script src="{{ asset('js/preview_image.js') }}"></script>
 
 @endsection
