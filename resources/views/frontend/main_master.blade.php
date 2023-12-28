@@ -35,7 +35,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('frontend/assets/img/favicon.png') }}">
 
-    <title>Atoli - Hotel & Resorts HTML Template</title>
+    <title>Atoli - Hotel & Resorts</title>
 </head>
 
 <body>
