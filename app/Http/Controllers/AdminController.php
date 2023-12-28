@@ -55,7 +55,10 @@ class AdminController extends Controller
         // delete previous profile picture and update profile photo
         if ($request->file('photo'))
         {
-            unlink(public_path('upload/admin_images/').$data->photo);
+            if(!empty($data->photo))
+            {
+                unlink(public_path('upload/admin_images/').$data->photo);
+            }
 
             $file = $request->file('photo');
             $filename = date('YmdHi').$file->getClientOriginalName();

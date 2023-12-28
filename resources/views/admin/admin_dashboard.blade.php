@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/dark-theme.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/semi-dark.css') }}"/>
 	<link rel="stylesheet" href="{{ asset('backend/assets/css/header-colors.css') }}"/>
-	{{-- Toastr --}}
+	{{-- Toastr CSS --}}
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 	<title>Admin Dashboard</title>
 </head>
@@ -92,7 +92,7 @@
 			   toastr.error(" {{ Session::get('message') }} ");
 			   break; 
 			}
-			@endif 
+		@endif 
 	</script>
 </body>
 
