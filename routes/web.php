@@ -24,7 +24,9 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [UserController::class, 'UserProfile'])->name('user.profile');
     Route::post('/profile/store', [UserController::class, 'UserStore'])->name('profile.store');
-    Route::get('/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+    Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+    Route::get('/user/password/change', [UserController::class, 'UserPasswordChange'])->name('user.password.change');
+    Route::post('/user/password/update', [UserController::class, 'UserPasswordUpdate'])->name('user.password.update');
 });
 
 // Admin Group Middleware

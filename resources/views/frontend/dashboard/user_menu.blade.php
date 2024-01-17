@@ -28,7 +28,7 @@
                     <a href="{{ route('user.profile') }}">User Profile </a>
                 </li>
                 <li>
-                    <a href="#">Change Password</a>
+                    <a href="{{ route('user.password.change') }}">Change Password</a>
                 </li>
                 <li>
                     <a href="#">Booking Details </a>
